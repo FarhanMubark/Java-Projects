@@ -1,0 +1,84 @@
+
+
+Q1)
+
+The output will be :
+
+1 - hey from message1
+2 - 1
+
+
+Because we use beans annotation to enforce the spring to implement 
+the method and only we have one message, then the program will print the message.
+
+-----------------------------------------
+
+Q2)
+
+The output will be : 
+
+1 - "hey from message1"
+2 - 1
+
+
+Program will print message1 because message2 has Qualifier("1").
+
+-----------------------------------------
+
+Q3)
+
+The output will be
+
+1 - hey from message1 
+2 - hey from message3
+3 - hey from message2
+
+It will start from message 1 or 3 but in message2 we assign the parameters to Qualifier("3") so,
+after it print the first message it will print the third message.
+
+
+-----------------------------------------
+
+Q4)
+
+The output will be :
+
+
+1- hey from message3
+2- hey from message2
+3- hey from message1
+
+Or
+
+1- hey from message3
+2- hey from message1
+3- hey from message2
+
+
+
+The program will implemnt the third method because the second method has parameters of Qualifier("3") then print the second of the first method for the controller will not implement it because the maincontroller does not have beans annotation  .
+
+
+-----------------------------------------
+
+Q5)
+
+The output will be :
+
+1-hey message3
+2-Hello mess2
+3-Hey from main Controller
+4-Hey mess1
+
+Or 
+
+1-hey message3
+2-Hey from main Controller
+3-Hey mess1
+4-Hello mess2
+
+The program will implement the third method because the second method has parameters of Qualifier("3") then the program will implement method 2 or method 1 if method 1, implemented the object of maincontroller is used as parameter in the first method so, it print the message in maincontroller constructor then go back to first method and print the message.
+
+
+
+
