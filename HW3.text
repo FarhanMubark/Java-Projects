@@ -18,7 +18,7 @@ Q2)
 The output will be : 
 
 1 - "hey from message1"
-2 - 1
+2 - "hey from message2"
 
 
 Program will print message1 because message2 has Qualifier("1").
